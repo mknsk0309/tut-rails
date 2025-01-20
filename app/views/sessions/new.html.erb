@@ -1,11 +1,6 @@
+<%= render "shared/flash_message" %>
 <div class="container">
   <%= form_with url: session_path, class: "px-4 py-3" do |f| %>
-    <% if flash[:alert] || flash[:notice] %>
-      <div class="mb-3">
-        <%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
-        <%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
-      </div>
-    <% end %>
     <div class="mb-3">
       <%= f.label :email_address, class: "form-label" %>
       <%= f.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: "email@example.com", value: params[:email_address], class: "form-control" %>

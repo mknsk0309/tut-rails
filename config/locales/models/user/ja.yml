@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      user: "ユーザ"
+    attributes:
+      user:
+        name: "ユーザ名"
+        account_id: "ユーザID"
+        email_address: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "再入力パスワード"
+        birthday: "生年月日"
