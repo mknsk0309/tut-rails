@@ -1,0 +1,26 @@
+<%= render "shared/flash_message" %>
+<div class="container">
+  <%= form_with url: users_path, class: "px-4 py-3" do |f| %> 
+    <div class="mb-3">
+      <%= f.label :name, class: "form-label" %>
+      <%= f.text_field :name, required: true, placeholder: "User Name", value: params[:name], class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :account_id, class: "form-label" %>
+      <%= f.text_field :account_id, required: true, placeholder: "Account ID", value: params[:account_id], class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :email_address, class: "form-label" %>
+      <%= f.email_field :email_address, required: true, autofocus: true, autocomplete: "email_address", placeholder: "email@example.com", value: params[:email_address], class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :password, class: "form-label" %>
+      <%= f.password_field :password, required: true, autocomplete: "current-password", placeholder: "Password", maxlength: 72, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :password_confirmation, class: "form-label" %>
+      <%= f.password_field :password_confirmation, required: true, autocomplete: "current-password", placeholder: "Confirm Password", maxlength: 72, class: "form-control" %>
+    </div>
+    <%= f.submit "Sign up", class: "btn btn-primary" %>
+  <% end %>
+</div>

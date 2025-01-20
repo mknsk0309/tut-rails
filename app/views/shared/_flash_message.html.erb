@@ -1,0 +1,23 @@
+<% if flash[:notice] %>
+  <div class="alert alert-info alert-dismissible", style="color: green;">
+    <div class="container">
+      <ul class="mb-0">
+        <% Array(flash[:notice]).each do |message| %>
+          <%= tag.li(message) %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+<% if flash[:alert] %>
+  <div class="alert alert-danger alert-dismissible", style="color: red;">
+    <div class="container">
+      <ul class="mb-0">
+        <% Array(flash[:alert]).each do |message| %>
+          <%= tag.li(message) %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
